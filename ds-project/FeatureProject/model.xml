@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="1"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="IotApp">
+			<graphics key="collapsed" value="false"/>
+			<alt abstract="true" mandatory="true" name="Language">
+				<graphics key="collapsed" value="false"/>
+				<feature name="English"/>
+				<feature name="Portuguese"/>
+			</alt>
+			<and abstract="true" mandatory="true" name="Input">
+				<graphics key="collapsed" value="false"/>
+				<feature mandatory="true" name="KeyboardMouse"/>
+				<feature name="VoiceCommands"/>
+			</and>
+			<and abstract="true" name="Output">
+				<graphics key="collapsed" value="false"/>
+				<feature mandatory="true" name="Screen"/>
+				<feature name="VoiceSynthesizer"/>
+				<feature name="LightSignals"/>
+			</and>
+			<alt abstract="true" name="Disability">
+				<graphics key="collapsed" value="false"/>
+				<feature abstract="true" name="Visual"/>
+				<feature abstract="true" name="Auditory"/>
+			</alt>
+			<and mandatory="true" name="ContactList">
+				<graphics key="collapsed" value="false"/>
+				<feature name="EmergencyContact"/>
+			</and>
+			<and abstract="true" name="Devices">
+				<graphics key="collapsed" value="false"/>
+				<feature abstract="true" name="HomeAssistant"/>
+				<feature abstract="true" name="SmartWatch"/>
+				<feature abstract="true" name="SmartWatchPlus"/>
+			</and>
+			<feature mandatory="true" name="Warning"/>
+			<feature name="Alert"/>
+		</and>
+	</struct>
+	<constraints>
+		<rule>
+			<imp>
+				<var>Visual</var>
+				<conj>
+					<var>VoiceCommands</var>
+					<var>VoiceSynthesizer</var>
+				</conj>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Auditory</var>
+				<var>LightSignals</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Alert</var>
+				<var>EmergencyContact</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>VoiceCommands</var>
+				<disj>
+					<var>HomeAssistant</var>
+					<var>SmartWatchPlus</var>
+				</disj>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>VoiceSynthesizer</var>
+				<var>HomeAssistant</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>LightSignals</var>
+				<var>SmartWatchPlus</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<disj>
+					<var>SmartWatch</var>
+					<disj>
+						<var>SmartWatchPlus</var>
+						<var>HomeAssistant</var>
+					</disj>
+				</disj>
+				<var>Alert</var>
+			</imp>
+		</rule>
+	</constraints>
+</featureModel>

@@ -1,0 +1,9 @@
+rootProject.name = 'AdapterZirks'
+
+include 'EstimoteAdapter:app', 'EstimoteAdapter:estimoteadapter'
+include ':upnpdiscovery'
+include ':lightify'
+include 'PhilipsHue'
+include ':wemoadapter'
+include ':OBDAdapter:obdadapterzirk'
+include ':OBDAdapter:obdapp'

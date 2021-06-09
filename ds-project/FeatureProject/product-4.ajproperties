@@ -1,0 +1,5 @@
+src.includes = src/
+src.excludes = src/i18n/Portuguese.aj,\
+               src/app/VoiceSynthesizer.aj,\
+               src/app/VoiceCommands.aj,\
+               src/app/LightSignals.aj

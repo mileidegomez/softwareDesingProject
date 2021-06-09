@@ -1,0 +1,16 @@
+// Configure the license gradle plugin: https://github.com/hierynomus/license-gradle-plugin
+// To create license reports, run "gradlew downloadLicenses"
+//apply from: "${scriptDir}/license.gradle"
+apply plugin: 'java'
+
+dependencies {
+    compile 'com.google.code.gson:gson:2.7'
+    testCompile 'junit:junit:4.12'
+    compile 'org.slf4j:slf4j-api:1.7.12'
+}
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Bezirk API', 'Implementation-Version': version
+    }
+}

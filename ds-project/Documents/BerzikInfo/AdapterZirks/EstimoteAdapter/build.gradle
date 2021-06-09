@@ -1,0 +1,8 @@
+allprojects {
+    repositories {
+        jcenter()
+		maven {
+            url "https://bezirk.artifactoryonline.com/bezirk/libs-release-local/"
+        }
+    }
+}

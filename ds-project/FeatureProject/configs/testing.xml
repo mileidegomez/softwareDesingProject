@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature automatic="selected" name="IotApp"/>
+	<feature automatic="selected" name="Language"/>
+	<feature automatic="unselected" name="English"/>
+	<feature manual="selected" name="Portuguese"/>
+	<feature automatic="selected" name="Input"/>
+	<feature automatic="selected" name="KeyboardMouse"/>
+	<feature automatic="selected" name="VoiceCommands"/>
+	<feature automatic="selected" name="Output"/>
+	<feature automatic="selected" name="Screen"/>
+	<feature automatic="selected" name="VoiceSynthesizer"/>
+	<feature name="LightSignals"/>
+	<feature automatic="selected" name="Disability"/>
+	<feature manual="selected" name="Visual"/>
+	<feature automatic="unselected" name="Auditory"/>
+	<feature automatic="selected" name="ContactList"/>
+	<feature automatic="selected" name="EmergencyContact"/>
+	<feature automatic="selected" name="Devices"/>
+	<feature name="SmartLights"/>
+	<feature automatic="selected" name="HomeAssistant"/>
+	<feature name="SmartWatch"/>
+	<feature name="SmartWatchPlus"/>
+	<feature automatic="selected" name="Warning"/>
+	<feature automatic="selected" name="Alert"/>
+</configuration>
